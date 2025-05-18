@@ -1,0 +1,26 @@
+﻿<Project Sdk="WixToolset.Sdk/6.0.0">
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+		<DefineConstants>Debug</DefineConstants>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="WixToolset.UI.wixext"/>
+	</ItemGroup>
+
+	<ItemGroup>
+		<Content Include="bannerBg.bmp" />
+		<Content Include="bannerTop.bmp" />
+		<Content Include="license.rtf" />
+		<Content Include="LireSR.ico" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\GCManagementApp\GCManagementApp.csproj">
+			<Name>GCManagementApp</Name>
+			<Project>{53afbc8a-7646-4541-bb1b-8abe0d5bbf60}</Project>
+			<Private>True</Private>
+			<DoNotHarvest>True</DoNotHarvest>
+			<RefProjectOutputGroups>Binaries;Content;Satellites</RefProjectOutputGroups>
+			<RefTargetDir>INSTALLFOLDER</RefTargetDir>
+		</ProjectReference>
+	</ItemGroup>
+</Project>
